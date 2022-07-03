@@ -59,6 +59,8 @@ class Game:
         pass
 
     def round_one(self):
+        self.player1.player_chooses()
+        self.player2.games_begin()
         pass
 
     def display_winner(self):
@@ -86,6 +88,7 @@ class Game:
         self.display_welcome()
         # self.display_rules()
         self.game_mode()
+        self.round_one()
         # self.display_winner()
         # self.play_again()
         pass
