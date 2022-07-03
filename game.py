@@ -7,7 +7,9 @@ class Game:
         pass
 
     def display_welcome(self):
-        print("Welcome to Rock, Paper, Scissor, ")
+        print("Welcome to Rock Paper Scissors Lizard Spock!")
+        print("Each match will be best of three games.")
+        print("Use the number keys to enter your selection.")
         pass
 
     def user_input(self):
@@ -21,5 +23,6 @@ class Game:
         pass
 
     def run_game(self):
+        self.display_welcome()
         self.user_input()
         pass
