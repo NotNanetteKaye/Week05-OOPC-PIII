@@ -17,9 +17,11 @@ class Game:
         if user_input == 1:
             self.player1= AI("Player1")
             self.player2 = AI("Player2")
-        else:
+        elif user_input == 2:
             self.player1= AI("Player1")
             self.player2 = AI("Player2")
+        else:
+            print("Please enter 1 or 2.")
         pass
 
     def run_game(self):
