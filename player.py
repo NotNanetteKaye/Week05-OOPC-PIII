@@ -22,5 +22,19 @@ class Player:
         time.sleep(1)
         print("Enter 4 for Spock")
         print("")
-        self.gesture = int(input("Please enter your gesture: "))
+        player_input = int(input("Please enter your gesture: "))
+        if player_input <= 4 and player_input > -1:
+            if player_input <= 4:
+                self.gesture = player_input
+                gesture_choice = self.gesture_list[self.gesture]
+                print(f"{self.name} chose {gesture_choice}!")
+                pass 
+            elif player_input > -1:
+                self.gesture = player_input
+                gesture_choice = self.gesture_list[self.gesture]
+                print(f"{self.name} chose {gesture_choice}!") 
+        else:
+            print("Invalid option.")
+            print("Please reinput your gesture choice.")
+            self.player_chooses()
         pass
