@@ -7,7 +7,7 @@ class Human(Player):
         pass
 
     def games_begin(self):
-        self.points 
+        self.player_chooses()
         pass
 
         

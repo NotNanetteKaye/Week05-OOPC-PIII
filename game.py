@@ -62,6 +62,10 @@ class Game:
         pass
 
     def display_winner(self):
+        if self.player1.points > self.player2.points:
+            print(f"Congratulations! {self.player1.name} won!")
+        if self.player2.points > self.player1.points:
+            print(f"Congratulations! {self.player2.name} won!")
         pass
 
     def run_game(self):
