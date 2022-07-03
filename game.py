@@ -1,4 +1,5 @@
 from ai import AI
+import time
 
 class Game:
     def __init__(self):
@@ -10,6 +11,22 @@ class Game:
         print("Welcome to Rock Paper Scissors Lizard Spock!")
         print("Each match will be best of three games.")
         print("Use the number keys to enter your selection.")
+        print("")
+        pass
+
+    def display_rules(self):
+        print("Rock crushes Scissors")
+        print("Scissors cuts Paper")
+        print("Paper covers Rock")
+        print("Rock crushes Lizard")
+        print("Lizard poisons Spock ")
+        print("Spock smashes Scissors")
+        print("Scissors decapitates Lizard")
+        print("Lizard eats Paper")
+        print("Paper disproves Spock")
+        print("Spock vaporizes Rock")
+        print("")
+        time.sleep(1)
         pass
 
     def user_input(self):
@@ -26,5 +43,6 @@ class Game:
 
     def run_game(self):
         self.display_welcome()
+        self.display_rules()
         self.user_input()
         pass
