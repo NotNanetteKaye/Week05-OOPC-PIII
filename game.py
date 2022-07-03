@@ -63,13 +63,29 @@ class Game:
 
     def display_winner(self):
         if self.player1.points > self.player2.points:
-            print(f"Congratulations! {self.player1.name} won!")
+            print(f"Congratulations! {self.player1.name} won best of 3!")
         if self.player2.points > self.player1.points:
-            print(f"Congratulations! {self.player2.name} won!")
+            print(f"Congratulations! {self.player2.name} won best of 3!")
+
+    def play_again(self):
+        user_input = (input("Would you like to play again? Enter y/n "))
+        if user_input == "y" or user_input == "n":
+            if user_input == "y":
+                self.run_game()
+            elif user_input == "n":
+                print("Okay!")
+            else:
+                print("Invalid option.")
+                print("Please choose a proper option.")
+                self.play_again()
+
+            
         pass
 
     def run_game(self):
         self.display_welcome()
         # self.display_rules()
         self.game_mode()
+        # self.display_winner()
+        # self.play_again()
         pass
