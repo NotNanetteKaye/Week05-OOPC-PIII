@@ -1,6 +1,8 @@
 from ai import AI
 import time
 
+from human import Human
+
 class Game:
     def __init__(self):
         self.player1= None
@@ -45,15 +47,21 @@ class Game:
         user_input= int(input("Please enter 1 for single-player or 2 for multi-player: "))
         if user_input == 1 or user_input == 2:
             if user_input == 1:
-                self.player1= AI("Player1")
-                self.player2 = AI("Player2")
+                self.player1= Human("Player 1")
+                self.player2 = AI("Robot")
             elif user_input == 2:
-                self.player1= AI("Player1")
-                self.player2 = AI("Player2")
+                self.player1= Human("Player 1")
+                self.player2 = Human("Player 2")
         else:
             print("Invalid option.")
             print("Please try again.")
             self.game_mode()
+        pass
+
+    def game_begins(self):
+        pass
+
+    def display_winner(self):
         pass
 
     def run_game(self):
