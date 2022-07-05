@@ -29,15 +29,18 @@ class Player:
                 self.gesture = player_input
                 self.gesture_choice = self.gesture_list[self.gesture]
                 print(f"{self.name} chose {self.gesture_choice}!")
+                print("")
                 pass 
             elif player_input > -1:
                 self.gesture = player_input
                 self.gesture_choice = self.gesture_list[self.gesture]
                 print(f"{self.name} chose {self.gesture_choice}!") 
+                print("")
         else:
             print("")
             print("Invalid option.")
             print("Please reinput your gesture choice.")
+            print("")
             self.player_chooses()
         pass
 

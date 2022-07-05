@@ -59,159 +59,148 @@ class Game:
         pass
 
     def player_chooses_rock(self):
-        if self.player1.points <= 2 and self.player2.points <= 2:
-            if self.player1.gesture == 0 and (self.player2.gesture == 2 or self.player2.gesture == 3):
-                self.player1.points += 1
-                print("")
-                print(f"{self.player1.gesture_choice} crushes {self.player2.gesture_choice}!")
-                print(f"{self.player1.name} wins!")
-                print("")
-            elif self.player2.gesture == 0 and (self.player1.gesture == 2 or self.player1.gesture == 3):
-             self.player2.points += 1
-             print("")
-             print(f"{self.player2.gesture_choice} crushes {self.player1.gesture_choice}!")
-             print(f"{self.player2.name} wins!")
-             print("")
-        else:
-            print("A tie! No points awarded.")
-            self.battlefield()
-        pass
-
-    def player_chooses_paper(self):
-        if self.player1.points <= 2 and self.player2.points <= 2:
-            if self.player1.gesture == 1 and self.player2.gesture == 0:
-                self.player1.points += 1
-                print("")
-                print(f"{self.player1.gesture_choice} covers {self.player2.gesture_choice}!")
-                print(f"{self.player1.name} wins!")
-                print("")
-            elif self.player2.gesture == 1 and self.player1.gesture == 0:
+        if self.player1.gesture == 0 and (self.player2.gesture == 2 or self.player2.gesture == 3):
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} crushes {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 0 and (self.player1.gesture == 2 or self.player1.gesture == 3):
                 self.player2.points += 1
                 print("")
-                print(f"{self.player2.gesture_choice} covers {self.player1.gesture_choice}!")
+                print(f"{self.player2.gesture_choice} crushes {self.player1.gesture_choice}!")
                 print(f"{self.player2.name} wins!")
                 print("")
-            elif self.player1.gesture == 1 and self.player2.gesture == 4:
-             self.player1.points += 1
-             print("")
-             print(f"{self.player1.gesture_choice} disproves {self.player2.gesture_choice}!")
-             print(f"{self.player1.name} wins!")
-             print("")
-            elif self.player2.gesture == 1 and self.player1.gesture == 4:
-             self.player2.points += 1
-             print("")
-             print(f"{self.player2.gesture_choice} disproves {self.player1.gesture_choice}!")
-             print(f"{self.player2.name} wins!")
-             print("")
-        else:
-            print("A tie! No points awarded.")
-            self.battlefield()
+        if self.player1.gesture == self.player2.gesture:
+                print("A tie! No points awarded.")
+    pass
+
+    def player_chooses_paper(self):
+        if self.player1.gesture == 1 and self.player2.gesture == 0:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} covers {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 1 and self.player1.gesture == 0:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} covers {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
+        elif self.player1.gesture == 1 and self.player2.gesture == 4:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} disproves {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 1 and self.player1.gesture == 4:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} disproves {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
         pass
     
     def player_chooses_scissors(self):
-        if self.player1.points <= 2 and self.player2.points <= 2:
-            if self.player1.gesture == 2 and self.player2.gesture == 1:
-                self.player1.points += 1
-                print("")
-                print(f"{self.player1.gesture_choice} cut {self.player2.gesture_choice}!")
-                print(f"{self.player1.name} wins!")
-                print("")
-            elif self.player2.gesture == 2 and self.player1.gesture == 1:
-                self.player2.points += 1
-                print("")
-                print(f"{self.player2.gesture_choice} cut {self.player1.gesture_choice}!")
-                print(f"{self.player2.name} wins!")
-                print("")
-            elif self.player1.gesture == 2 and self.player2.gesture == 3:
-             self.player1.points += 1
-             print("")
-             print(f"{self.player1.gesture_choice} decapitate {self.player2.gesture_choice}!")
-             print(f"{self.player1.name} wins!")
-             print("")
-            elif self.player2.gesture == 2 and self.player1.gesture == 3:
-             self.player2.points += 1
-             print("")
-             print(f"{self.player2.gesture_choice} decapitate {self.player1.gesture_choice}!")
-             print(f"{self.player2.name} wins!")
-             print("")
-        else:
-            print("A tie! No points awarded.")
-            self.battlefield()
+        if self.player1.gesture == 2 and self.player2.gesture == 1:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} cut {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 2 and self.player1.gesture == 1:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} cut {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
+        elif self.player1.gesture == 2 and self.player2.gesture == 3:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} decapitate {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 2 and self.player1.gesture == 3:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} decapitate {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
         pass
 
     def player_chooses_lizard(self):  
-        if self.player1.points <= 2 and self.player2.points <= 2:
-            if self.player1.gesture == 3 and self.player2.gesture == 4:
-                self.player1.points += 1
-                print("")
-                print(f"{self.player1.gesture_choice} poisons {self.player2.gesture_choice}!")
-                print(f"{self.player1.name} wins!")
-                print("")
-            elif self.player2.gesture == 3 and self.player1.gesture == 4:
-                self.player2.points += 1
-                print("")
-                print(f"{self.player2.gesture_choice} poisons {self.player1.gesture_choice}!")
-                print(f"{self.player2.name} wins!")
-                print("")
-            elif self.player1.gesture == 3 and self.player2.gesture == 1:
-             self.player1.points += 1
-             print("")
-             print(f"{self.player1.gesture_choice} eats {self.player2.gesture_choice}!")
-             print(f"{self.player1.name} wins!")
-             print("")
-            elif self.player2.gesture == 3 and self.player1.gesture == 1:
-             self.player2.points += 1
-             print("")
-             print(f"{self.player2.gesture_choice} eats {self.player1.gesture_choice}!")
-             print(f"{self.player2.name} wins!")
-             print("")
-        else:
-            print("A tie! No points awarded.")
-            self.battlefield()
+        if self.player1.gesture == 3 and self.player2.gesture == 4:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} poisons {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 3 and self.player1.gesture == 4:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} poisons {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
+        elif self.player1.gesture == 3 and self.player2.gesture == 1:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} eats {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 3 and self.player1.gesture == 1:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} eats {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
         pass 
 
     def player_chooses_spock(self):
-        if self.player1.points <= 2 and self.player2.points <= 2:
-            if self.player1.gesture == 4 and self.player2.gesture == 2:
-                self.player1.points += 1
-                print("")
-                print(f"{self.player1.gesture_choice} smashes {self.player2.gesture_choice}!")
-                print(f"{self.player1.name} wins!")
-                print("")
-            elif self.player2.gesture == 4 and self.player1.gesture == 2:
-                self.player2.points += 1
-                print("")
-                print(f"{self.player2.gesture_choice} smashes {self.player1.gesture_choice}!")
-                print(f"{self.player2.name} wins!")
-                print("")
-            elif self.player1.gesture == 4 and self.player2.gesture == 0:
-             self.player1.points += 1
-             print("")
-             print(f"{self.player1.gesture_choice} vaporizes {self.player2.gesture_choice}!")
-             print(f"{self.player1.name} wins!")
-             print("")
-            elif self.player2.gesture == 4 and self.player1.gesture == 0:
-             self.player2.points += 1
-             print("")
-             print(f"{self.player2.gesture_choice} vaporizes {self.player1.gesture_choice}!")
-             print(f"{self.player2.name} wins!")
-             print("")
-        else:
-            print("A tie! No points awarded.")
-            self.battlefield()
+        if self.player1.gesture == 4 and self.player2.gesture == 2:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} smashes {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 4 and self.player1.gesture == 2:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} smashes {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
+        elif self.player1.gesture == 4 and self.player2.gesture == 0:
+            self.player1.points += 1
+            print("")
+            print(f"{self.player1.gesture_choice} vaporizes {self.player2.gesture_choice}!")
+            print(f"{self.player1.name} wins!")
+            print("")
+        elif self.player2.gesture == 4 and self.player1.gesture == 0:
+            self.player2.points += 1
+            print("")
+            print(f"{self.player2.gesture_choice} vaporizes {self.player1.gesture_choice}!")
+            print(f"{self.player2.name} wins!")
+            print("")
         pass
 
     def battlefield(self):
-        self.player1.player_chooses()
-        self.player2.games_begin()
-        while self.player1.points < 3 and 
-        pass
+        while self.player1.points < 2 and self.player2.points < 2:
+            self.player1.player_chooses()
+            self.player2.games_begin()
+            self.player_chooses_rock()
+            self.player_chooses_paper()
+            self.player_chooses_scissors()
+            self.player_chooses_lizard()
+            self.player_chooses_spock()
 
     def display_winner(self):
-        if self.player1.points == 2:
-            print(f"Congratulations! {self.player1.name} won best of 3!")
-        if self.player2.points == 2:
-            print(f"Congratulations! {self.player2.name} won best of 3!")
+        if self.player1.points > self.player2.points:
+            print(f"Congratulations! {self.player1.name} wins the game of Rock, Paper, Scissor, Lizard, Spock!")
+        if self.player2.points > self.player1.points:
+            print(f"Congratulations! {self.player2.name} wins the game of Rock, Paper, Scissors, Lizard, Spock!")
+        if self.player1.points == self.player2.points:
+            print("No winner!")
+        pass
 
     def play_again(self):
         user_input = (input("Would you like to play again? Enter y/n "))
@@ -232,5 +221,13 @@ class Game:
         self.game_mode()
         self.battlefield()
         self.display_winner()
-        # self.play_again()
+        self.play_again()
         pass
+
+    # def battlefield_round_two(self):
+    #     self.battlefield()
+    #     pass
+
+    # def battlefield_round_three(self):
+    #     self.battlefield()
+    #     pass
