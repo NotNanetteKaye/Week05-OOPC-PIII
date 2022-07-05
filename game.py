@@ -79,16 +79,28 @@ class Game:
 
     def player_chooses_paper(self):
         if self.player1.points <= 2 and self.player2.points <= 2:
-            if self.player1.gesture == 0 and (self.player2.gesture == 2 or self.player2.gesture == 3):
+            if self.player1.gesture == 1 and self.player2.gesture == 0:
                 self.player1.points += 1
                 print("")
-                print(f"{self.player1.gesture_choice} crushes {self.player2.gesture_choice}!")
+                print(f"{self.player1.gesture_choice} covers {self.player2.gesture_choice}!")
                 print(f"{self.player1.name} wins!")
                 print("")
-            elif self.player2.gesture == 0 and (self.player1.gesture == 2 or self.player1.gesture == 3):
+            elif self.player2.gesture == 1 and self.player1.gesture == 0:
+                self.player2.points += 1
+                print("")
+                print(f"{self.player2.gesture_choice} covers {self.player1.gesture_choice}!")
+                print(f"{self.player2.name} wins!")
+                print("")
+            elif self.player1.gesture == 1 and self.player2.gesture == 4:
+             self.player1.points += 1
+             print("")
+             print(f"{self.player1.gesture_choice} disproves {self.player2.gesture_choice}!")
+             print(f"{self.player1.name} wins!")
+             print("")
+            elif self.player2.gesture == 1 and self.player1.gesture == 4:
              self.player2.points += 1
              print("")
-             print(f"{self.player2.gesture_choice} crushes {self.player1.gesture_choice}!")
+             print(f"{self.player2.gesture_choice} disproves {self.player1.gesture_choice}!")
              print(f"{self.player2.name} wins!")
              print("")
         else:
@@ -125,7 +137,8 @@ class Game:
         # self.display_rules()
         self.game_mode()
         self.battlefield()
-        self.player_winner()
+        self.player_chooses_rock()
+        self.player_chooses_paper()
         self.display_winner()
         # self.play_again()
         pass
