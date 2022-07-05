@@ -58,7 +58,45 @@ class Game:
             self.game_mode()
         pass
 
-    def round_one(self):
+    def player_chooses_rock(self):
+        if self.player1.points <= 2 and self.player2.points <= 2:
+            if self.player1.gesture == 0 and (self.player2.gesture == 2 or self.player2.gesture == 3):
+                self.player1.points += 1
+                print("")
+                print(f"{self.player1.gesture_choice} crushes {self.player2.gesture_choice}!")
+                print(f"{self.player1.name} wins!")
+                print("")
+            elif self.player2.gesture == 0 and (self.player1.gesture == 2 or self.player1.gesture == 3):
+             self.player2.points += 1
+             print("")
+             print(f"{self.player2.gesture_choice} crushes {self.player1.gesture_choice}!")
+             print(f"{self.player2.name} wins!")
+             print("")
+        else:
+            print("A tie! No points awarded.")
+            self.battlefield()
+        pass
+
+    def player_chooses_paper(self):
+        if self.player1.points <= 2 and self.player2.points <= 2:
+            if self.player1.gesture == 0 and (self.player2.gesture == 2 or self.player2.gesture == 3):
+                self.player1.points += 1
+                print("")
+                print(f"{self.player1.gesture_choice} crushes {self.player2.gesture_choice}!")
+                print(f"{self.player1.name} wins!")
+                print("")
+            elif self.player2.gesture == 0 and (self.player1.gesture == 2 or self.player1.gesture == 3):
+             self.player2.points += 1
+             print("")
+             print(f"{self.player2.gesture_choice} crushes {self.player1.gesture_choice}!")
+             print(f"{self.player2.name} wins!")
+             print("")
+        else:
+            print("A tie! No points awarded.")
+            self.battlefield()
+        pass
+    
+    def battlefield(self):
         self.player1.player_chooses()
         self.player2.games_begin()
         pass
@@ -79,16 +117,15 @@ class Game:
             else:
                 print("Invalid option.")
                 print("Please choose a proper option.")
-                self.play_again()
-
-            
+                self.play_again() 
         pass
 
     def run_game(self):
         self.display_welcome()
         # self.display_rules()
         self.game_mode()
-        self.round_one()
-        # self.display_winner()
+        self.battlefield()
+        self.player_winner()
+        self.display_winner()
         # self.play_again()
         pass

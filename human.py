@@ -9,6 +9,3 @@ class Human(Player):
     def games_begin(self):
         self.player_chooses()
         pass
-
-        
-    pass

@@ -4,10 +4,12 @@ from player import Player
 class AI(Player):
     def __init__(self, name):
         super().__init__(name)
-    pass
+        pass
 
     def games_begin(self):
-        gesture_choice = self.gesture_list[randint(0,4)]
-        print(f"{self.name} choose {gesture_choice}!")
+        self.gesture = randint(0,4)
+        self.gesture_choice = self.gesture_list[self.gesture]
+        print(f"{self.name} choose {self.gesture_choice}!")
+        pass
 
 
