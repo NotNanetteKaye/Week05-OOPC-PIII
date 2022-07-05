@@ -108,15 +108,47 @@ class Game:
             self.battlefield()
         pass
     
+    def player_chooses_scissors(self):
+        if self.player1.points <= 2 and self.player2.points <= 2:
+            if self.player1.gesture == 2 and self.player2.gesture == 1:
+                self.player1.points += 1
+                print("")
+                print(f"{self.player1.gesture_choice} cut {self.player2.gesture_choice}!")
+                print(f"{self.player1.name} wins!")
+                print("")
+            elif self.player2.gesture == 2 and self.player1.gesture == 1:
+                self.player2.points += 1
+                print("")
+                print(f"{self.player2.gesture_choice} cut {self.player1.gesture_choice}!")
+                print(f"{self.player2.name} wins!")
+                print("")
+            elif self.player1.gesture == 2 and self.player2.gesture == 3:
+             self.player1.points += 1
+             print("")
+             print(f"{self.player1.gesture_choice} decapitate {self.player2.gesture_choice}!")
+             print(f"{self.player1.name} wins!")
+             print("")
+            elif self.player2.gesture == 2 and self.player1.gesture == 3:
+             self.player2.points += 1
+             print("")
+             print(f"{self.player2.gesture_choice} decapitate {self.player1.gesture_choice}!")
+             print(f"{self.player2.name} wins!")
+             print("")
+        else:
+            print("A tie! No points awarded.")
+            self.battlefield()
+        pass
+        
+
     def battlefield(self):
         self.player1.player_chooses()
         self.player2.games_begin()
         pass
 
     def display_winner(self):
-        if self.player1.points > self.player2.points:
+        if self.player1.points == 2:
             print(f"Congratulations! {self.player1.name} won best of 3!")
-        if self.player2.points > self.player1.points:
+        if self.player2.points == 2:
             print(f"Congratulations! {self.player2.name} won best of 3!")
 
     def play_again(self):
@@ -137,8 +169,6 @@ class Game:
         # self.display_rules()
         self.game_mode()
         self.battlefield()
-        self.player_chooses_rock()
-        self.player_chooses_paper()
         self.display_winner()
         # self.play_again()
         pass
