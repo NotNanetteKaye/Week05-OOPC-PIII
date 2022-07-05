@@ -170,9 +170,41 @@ class Game:
             self.battlefield()
         pass 
 
+    def player_chooses_spock(self):
+        if self.player1.points <= 2 and self.player2.points <= 2:
+            if self.player1.gesture == 4 and self.player2.gesture == 2:
+                self.player1.points += 1
+                print("")
+                print(f"{self.player1.gesture_choice} smashes {self.player2.gesture_choice}!")
+                print(f"{self.player1.name} wins!")
+                print("")
+            elif self.player2.gesture == 4 and self.player1.gesture == 2:
+                self.player2.points += 1
+                print("")
+                print(f"{self.player2.gesture_choice} smashes {self.player1.gesture_choice}!")
+                print(f"{self.player2.name} wins!")
+                print("")
+            elif self.player1.gesture == 4 and self.player2.gesture == 0:
+             self.player1.points += 1
+             print("")
+             print(f"{self.player1.gesture_choice} vaporizes {self.player2.gesture_choice}!")
+             print(f"{self.player1.name} wins!")
+             print("")
+            elif self.player2.gesture == 4 and self.player1.gesture == 0:
+             self.player2.points += 1
+             print("")
+             print(f"{self.player2.gesture_choice} vaporizes {self.player1.gesture_choice}!")
+             print(f"{self.player2.name} wins!")
+             print("")
+        else:
+            print("A tie! No points awarded.")
+            self.battlefield()
+        pass
+
     def battlefield(self):
         self.player1.player_chooses()
         self.player2.games_begin()
+        while self.player1.points < 3 and 
         pass
 
     def display_winner(self):
