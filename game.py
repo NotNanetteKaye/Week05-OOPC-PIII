@@ -138,7 +138,37 @@ class Game:
             print("A tie! No points awarded.")
             self.battlefield()
         pass
-        
+
+    def player_chooses_lizard(self):  
+        if self.player1.points <= 2 and self.player2.points <= 2:
+            if self.player1.gesture == 3 and self.player2.gesture == 4:
+                self.player1.points += 1
+                print("")
+                print(f"{self.player1.gesture_choice} poisons {self.player2.gesture_choice}!")
+                print(f"{self.player1.name} wins!")
+                print("")
+            elif self.player2.gesture == 3 and self.player1.gesture == 4:
+                self.player2.points += 1
+                print("")
+                print(f"{self.player2.gesture_choice} poisons {self.player1.gesture_choice}!")
+                print(f"{self.player2.name} wins!")
+                print("")
+            elif self.player1.gesture == 3 and self.player2.gesture == 1:
+             self.player1.points += 1
+             print("")
+             print(f"{self.player1.gesture_choice} eats {self.player2.gesture_choice}!")
+             print(f"{self.player1.name} wins!")
+             print("")
+            elif self.player2.gesture == 3 and self.player1.gesture == 1:
+             self.player2.points += 1
+             print("")
+             print(f"{self.player2.gesture_choice} eats {self.player1.gesture_choice}!")
+             print(f"{self.player2.name} wins!")
+             print("")
+        else:
+            print("A tie! No points awarded.")
+            self.battlefield()
+        pass 
 
     def battlefield(self):
         self.player1.player_chooses()
