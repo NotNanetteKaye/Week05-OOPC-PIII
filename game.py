@@ -217,17 +217,9 @@ class Game:
 
     def run_game(self):
         self.display_welcome()
-        # self.display_rules()
+        self.display_rules()
         self.game_mode()
         self.battlefield()
         self.display_winner()
         self.play_again()
         pass
-
-    # def battlefield_round_two(self):
-    #     self.battlefield()
-    #     pass
-
-    # def battlefield_round_three(self):
-    #     self.battlefield()
-    #     pass
