@@ -1,12 +1,12 @@
 # WEEK 5: OBJECT ORIENTED PROGRAMMING PART III
-Link:  
+###### Link:  
 \- Notes: https://docs.google.com/document/d/1NOeTvjIhnwAZYeQUX0hCB7N6WSaPJVFBagFW4BntmEs/edit
 
 ### PROJECTS IN THIS GIT:
 ## ROCK, PAPER, SCISSOR, LIZARD, SPOCK (RPSLS)
 "For this project, you will be building a console version of the Rock Paper Scissors Lizard Spock game! RPSLS is a great way to get more familiar with key Object-Oriented Programming concepts, like classes/objects, properties, methods, and inheritance.  This project will require thinking critically about where inheritance makes the most sense, and writing the logic of the game in such a way that any kind of player can play the game with the same results, and minimal modification of the code. Bear in mind your SOLID principles and keep it simple!"  
 
-Link:  
+###### Link:  
 \- Framework: https://docs.google.com/document/d/1Vb-X64pXSN389945eSqGklGcDVcWJSLx/edit#bookmark=id.30j0zll
 
 
