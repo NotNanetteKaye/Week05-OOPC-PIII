@@ -8,7 +8,7 @@ Link:
 \- Framework: https://docs.google.com/document/d/1Vb-X64pXSN389945eSqGklGcDVcWJSLx/edit#bookmark=id.30j0zll
 
 
-list of modules -> classes:
+<!-- list of modules -> classes:
 main.py
 ai.py -> AI
 human.py -> Human
@@ -41,4 +41,4 @@ step 1: display welcome and instructions for player
     use the number keys to enter your selection
         look up sleep to list out rules one at a time
 step 2: please select an option: human vs AI game or human
-step 3:
+step 3: -->
