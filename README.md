@@ -17,7 +17,7 @@ Python, Visual Studio Code w/ Debugger, Git/GitHub
 
 
 ## Battleship  
-🤔: Need to start
+📈: Create class diagram
 
 ##### Link:  
 \- User Stories: https://docs.google.com/document/d/1xoUeZCCdmgJ4KGAINutMjWTs57B14h_r/edit
