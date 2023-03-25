@@ -14,7 +14,7 @@ Python, Visual Studio Code w/ Debugger, Git/GitHub
 ##### Links:  
 \- Framework: https://docs.google.com/document/d/1Vb-X64pXSN389945eSqGklGcDVcWJSLx/edit#bookmark=id.30j0zll  
 \- User Stories: https://docs.google.com/document/u/1/d/1mL_51UXA-wIprrBL2UGe8jFzb0Mj6sbr/edit?usp=drive_web&ouid=110108956357895038429&rtpof=true  
-\- 🤔: Need to add class diagram
+
 
 ## Battleship  
 🤔: Need to start
