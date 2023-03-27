@@ -14,5 +14,5 @@ two_dimensional_list = [[1, 2, 3], [1, 5, 9]] # 2 dimensional list = 2 row
 #for num in two_dimensional_list:
 #    print(num)
 
-# how to get the 2nd element of the 1st list?
+# how to get the 2nd element of the 1st list? https://www.youtube.com/watch?v=YtodQOBnWvY
 print(two_dimensional_list[0][1]) #[row][column]
