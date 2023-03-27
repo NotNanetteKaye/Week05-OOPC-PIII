@@ -1,7 +1,7 @@
 # WEEK 5: OBJECT ORIENTED PROGRAMMING PART III
 ##### Link:  
 \- Notes: https://docs.google.com/document/d/1NOeTvjIhnwAZYeQUX0hCB7N6WSaPJVFBagFW4BntmEs/edit  
-\- Key Concept: Inheritance 🟥
+\- Key Concept: Inheritance 🟨
 
 ### PROJECTS IN THIS GIT:
 ## ROCK, PAPER, SCISSOR, LIZARD, SPOCK (RPSLS)
